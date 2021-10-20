@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Login from "./Components/Login/Login";
+import Header from "./Components/Header/Header";
+import {useDispatch, useSelector} from "react-redux";
+import {Route, Switch} from "react-router-dom";
+import HomePage from "./Components/HomePage/HomePage";
+import AddProducts from "./Components/AddProducts/AddProducts";
+import EditProducts from "./Components/EditProducts/EditProducts";
 function App() {
+  const user = useSelector(state => state.login.user);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {user ? (
+          <>
+            <Header/>
+            <Switch>
+              <Route exact path={"/"} component={HomePage}/>
+              <Route exact path={"/add-products"} component={AddProducts}/>
+              <Route exact path={"/edit-product"} component={EditProducts}/>
+            </Switch>
+          </>
+
+      ):(
+          <Login/>
+      )}
     </div>
   );
 }

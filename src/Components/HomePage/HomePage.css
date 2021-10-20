@@ -1,0 +1,13 @@
+.HomePage-products-wrapper{
+    width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.HomePage-header-text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

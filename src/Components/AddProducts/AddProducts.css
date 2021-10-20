@@ -1,0 +1,38 @@
+.AddProducts-wrapper{
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.AddProducts-input-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.AddProducts-input-form label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.AddProducts-input-form input{
+    padding: 0;
+    line-height: 30px;
+    background: #603bbb;
+    border-width: 0;
+    border-radius: 20px;
+    width: 300px;
+    padding:5px 30px;
+    color: white;
+}
+.AddProducts-button{
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px 35px;
+}
+.AddProducts-error{
+    background-color: #ff4c5b;
+    color: white;
+    padding: 10px 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
